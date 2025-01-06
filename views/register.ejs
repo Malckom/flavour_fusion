@@ -4,7 +4,8 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
   <% } %>
-  
+
+
   <% if (typeof success != 'undefined') { %>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       <strong>Success:</strong> <%= success %>
@@ -16,26 +17,30 @@
       }, 500); 
     </script>
   <% } %>
+
   
   <div class="card shadow-lg p-4 mx-auto mt-5" style="max-width: 500px;">
     <h2 class="text-center mb-4">Sign Up</h2>
   
     <form method="POST" action="/register" autocomplete="off" id="registerForm">
-      <div class="mb-3">
+
+        <div class="mb-3">
         <label for="username" class="form-label">Username</label>
         <input type="text" class="form-control" id="username" name="username" autocomplete="username" required>
         <div class="invalid-feedback">Username is required.</div>
       </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email" name="email" autocomplete="email" required>
-        <div class="invalid-feedback">A valid email is required.</div>
-      </div>
+
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" id="password" name="password" autocomplete="new-password" required>
         <div class="invalid-feedback">Password is required.</div>
       </div>
+
+      <div class="mb-3">
+        <label for="profileImg" class="form-label">Profile Image</label>
+        <input type="file" class="form-control" id="profileImg" name="profileImg" accept="image/*">
+      </div>
+
       <button type="submit"
         class="btn btn-primary w-100"
         style="

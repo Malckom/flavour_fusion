@@ -4,6 +4,8 @@ const fileUpload = require('express-fileupload');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
+const multer = require('multer');
+const path = require('path');
 
 
 const app = express();

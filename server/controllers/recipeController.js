@@ -111,7 +111,7 @@ exports.exploreLatest = async(req, res) => {
     const recipe = await Recipe.find({}).sort({ _id: -1 }).limit(limitNumber);
     res.render('explore-latest', { title: 'Flavour Fusion - Explore Latest', recipe } );
   } catch (error) {
-    res.satus(500).send({message: error.message || "Error Occured" });
+    res.status(500).send({message: error.message || "Error Occured" });
   }
 };
 
@@ -256,6 +256,30 @@ exports.deleteRecipe = async (req, res) => {
 
         await Recipe.findByIdAndRemove(recipeId);
         res.redirect('/');
+    } catch (error) {
+        res.status(500).send({ message: error.message || "Error occurred" });
+    }
+};
+
+/**
+ * GET /about
+ * About Page
+ */
+exports.aboutRecipe = async (req, res) => {
+    try {
+        res.render('about', { title: 'Flavour Fusion - About' });
+    } catch (error) {
+        res.status(500).send({ message: error.message || "Error occurred" });
+    }
+};
+
+/**
+ * GET /contact
+ * Contact Page
+ */
+exports.contactRecipe = async (req, res) => {
+    try {
+        res.render('contact', { title: 'Flavour Fusion - Contact' });
     } catch (error) {
         res.status(500).send({ message: error.message || "Error occurred" });
     }
