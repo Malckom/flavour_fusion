@@ -118,30 +118,3 @@
   </div>
 </div>
 
-<style>
-  .feature-box {
-    transition: transform 0.3s ease;
-  }
-  
-  .feature-box:hover {
-    transform: translateY(-5px);
-  }
-  
-  .bi {
-    color: #0d6efd;
-  }
-
-  .card {
-    border: none;
-    transition: box-shadow 0.3s ease;
-  }
-
-  .card:hover {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)!important;
-  }
-
-  .bg-primary .card-title, 
-  .bg-primary p {
-    color: white;
-  }
-</style>
