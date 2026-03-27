@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "connect-flash": "^0.1.1",
-    "cookie-parser": "^1.4.6",
+    "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express-ejs-layouts": "^2.5.1",
